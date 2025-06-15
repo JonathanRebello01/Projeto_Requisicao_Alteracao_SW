@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ApiRequisicaoAlteracaoApplication",
+            "request": "launch",
+            "mainClass": "com.api.api_requisicao_alteracao.ApiRequisicaoAlteracaoApplication"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Api_requisicao_alteracaoApplication<api_requisicao_alteracao>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.api.api_requisicao_alteracao.Api_requisicao_alteracaoApplication",
+            "projectName": "api_requisicao_alteracao",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiRequisicaoAlteracaoApplication<api_requisicao_alteracao>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.api.api_requisicao_alteracao.ApiRequisicaoAlteracaoApplication",
+            "projectName": "api_requisicao_alteracao",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
