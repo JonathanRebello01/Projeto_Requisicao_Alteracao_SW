@@ -4,8 +4,8 @@ const formulario = document.getElementById("form");
 const campoTitulo = document.getElementById("titulo");
 const campoDescricao = document.getElementById("descricao");
 const campoSolicitante = document.getElementById("solicitante");
-const campoDataSolicitacao = document.getElementById("data_solicitacao");
-const campoAnalista = document.getElementById("analista_responsavel");
+const campoDataSolicitacao = document.getElementById("dataSolicitacao");
+const campoAnalista = document.getElementById("analistaResponsavel");
 const campoStatus = document.getElementById("status");
 const salvar = document.getElementById("btnSalvar");
 
@@ -30,8 +30,8 @@ function salvarRequisicao() {
     titulo: campoTitulo.value,
     descricao: campoDescricao.value,
     solicitante: campoSolicitante.value,
-    data_solicitacao: campoDataSolicitacao.value,
-    analista_responsavel: campoAnalista.value,
+    dataSolicitacao: campoDataSolicitacao.value,
+    analistaResponsavel: campoAnalista.value,
     status: campoStatus.value,
   };
 
@@ -109,15 +109,15 @@ function createRows(datas) {
 
   for (let data of datas) {
     const tr = document.createElement("tr");
-    tr.setAttribute("data-id", data.id_requisicao);
+    tr.setAttribute("data-id", data.idRequisicao);
 
     const campos = [
-      data.id_requisicao,
+      data.idRequisicao,
       data.titulo,
       data.descricao,
       data.solicitante,
-      data.data_solicitacao,
-      data.analista_responsavel,
+      data.dataSolicitacao,
+      data.analistaResponsavel,
       data.status,
     ];
 
@@ -133,11 +133,11 @@ function createRows(datas) {
 
     btnEditar.className = "btn btn-secondary";
     btnEditar.textContent = "Editar";
-    btnEditar.addEventListener("click", () => editarRequisicao(data.id_requisicao));
+    btnEditar.addEventListener("click", () => editarRequisicao(data.idRequisicao));
 
     btnExcluir.className = "btn btn-danger";
     btnExcluir.textContent = "Excluir";
-    btnExcluir.addEventListener("click", () => excluirRequisicao(data.id_requisicao));
+    btnExcluir.addEventListener("click", () => excluirRequisicao(data.idRequisicao));
 
     tdAcoes.appendChild(btnEditar);
     tdAcoes.appendChild(btnExcluir);
@@ -157,19 +157,19 @@ function editarRequisicao(id) {
       document.getElementById("editTitulo").value = data.titulo;
       document.getElementById("editDescricao").value = data.descricao;
       document.getElementById("editSolicitante").value = data.solicitante;
-      document.getElementById("editDataSolicitacao").value = data.data_solicitacao;
-      document.getElementById("editAnalista").value = data.analista_responsavel;
+      document.getElementById("editDataSolicitacao").value = data.dataSolicitacao;
+      document.getElementById("editAnalista").value = data.analistaResponsavel;
       document.getElementById("editStatus").value = data.status;
 
       document.getElementById("editForm").onsubmit = function (event) {
         event.preventDefault();
         const updated = {
-          id_requisicao: id,
+          idRequisicao: id,
           titulo: document.getElementById("editTitulo").value,
           descricao: document.getElementById("editDescricao").value,
           solicitante: document.getElementById("editSolicitante").value,
-          data_solicitacao: document.getElementById("editDataSolicitacao").value,
-          analista_responsavel: document.getElementById("editAnalista").value,
+          dataSolicitacao: document.getElementById("editDataSolicitacao").value,
+          analistaResponsavel: document.getElementById("editAnalista").value,
           status: document.getElementById("editStatus").value,
         };
 

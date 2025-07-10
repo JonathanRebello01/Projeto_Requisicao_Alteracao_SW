@@ -20,7 +20,7 @@ public class RequisicaoAlteracao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_requisicao")
+    @Column(name = "idRequisicao")
     private Long idRequisicao;
 
     @NotBlank(message = "Título é obrigatório")

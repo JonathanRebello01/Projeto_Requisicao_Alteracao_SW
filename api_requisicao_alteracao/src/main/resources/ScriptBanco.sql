@@ -1,4 +1,5 @@
--- Active: 1722699540176@@localhost@3306@bancoRequisicao
+Active: 1722699540176@@localhost@3306@bancoRequisicao;
+
 -- Apagar o banco de dados, se existir
 DROP DATABASE IF EXISTS bancoRequisicao;
 
@@ -13,12 +14,12 @@ USE bancoRequisicao;
 
 -- Criar a tabela requisicao_alteracao
 CREATE TABLE requisicao_alteracao (
-    id_requisicao INT AUTO_INCREMENT PRIMARY KEY,
+    idRequisicao INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(100) NOT NULL,
     descricao TEXT NOT NULL,
     solicitante VARCHAR(50) NOT NULL,
-    data_solicitacao VARCHAR(50),
-    analista_responsavel VARCHAR(50),
+    dataSolicitacao VARCHAR(50),
+    analistaResponsavel VARCHAR(50),
     status VARCHAR(30) NOT NULL
 );
 

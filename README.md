@@ -30,12 +30,12 @@ Este projeto é uma aplicação web para gerenciamento de requisições de alter
 
 ## 📄 Campos da Tabela
 
-- `id_requisicao` (gerado automaticamente)
+- `idRequisicao` (gerado automaticamente)
 - `titulo`
 - `descricao`
 - `solicitante`
-- `data_solicitacao`
-- `analista_responsavel`
+- `dataSolicitacao`
+- `analistaResponsavel`
 - `status`
 
 ## 🌐 Endpoints da API
